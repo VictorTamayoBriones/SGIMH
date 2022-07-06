@@ -1,9 +1,9 @@
-import './style.css'
+import { Login } from './style'
 
 export const LoginConponent = ({children}) =>{
     return(
-        <div className="login">
+        <Login>
             {children}
-        </div>
+        </Login>
     )
 }

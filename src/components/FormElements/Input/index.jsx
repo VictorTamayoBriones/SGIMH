@@ -1,7 +1,7 @@
-import './style.css'
+import { InputComponent } from './style'
 
 export const Input = ({type, placeholder, onChange, value, name}) => {
     return(
-        <input type={ type } placeholder={ placeholder } onChange={ onChange } value={ value } name={ name } />
+        <InputComponent type={ type } placeholder={ placeholder } onChange={ onChange } value={ value } name={ name } />
     )
 }

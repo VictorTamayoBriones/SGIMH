@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components/Buttons';
 import { Form } from '../../components/FormElements/Form';
 import { Input } from '../../components/FormElements/Input';
@@ -8,18 +9,26 @@ import Logo from '../../logo.png';
 
 export const Login = () =>{
 
+    const navigate = useNavigate();
+
     const[formData, setFormData]=useState({
         user: '',
         pass:''
     })
 
-    const { users } = useContext(UsersContext);
+    const { users, currentUser, setCurrentUser } = useContext(UsersContext);
 
     const handleChange=({target:{name, value}}) => name === 'user' ? setFormData({...formData, user: value}) : setFormData({...formData, pass: value});
 
     const handleClick = (e)=>{
         e.preventDefault();
-        console.log(users.filter( user => user.user === formData.user && user.pass === formData.pass )[0])
+        if( users.filter( user => user.user === formData.user && user.pass === formData.pass )[0] ){
+            setCurrentUser(users.filter( user => user.user === formData.user && user.pass === formData.pass ))
+            navigate('/dashboard')
+        }else{
+            console.log('Existio un error');
+        }
+        
     }
     return(
         <LoginConponent>

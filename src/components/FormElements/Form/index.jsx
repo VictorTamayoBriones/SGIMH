@@ -1,9 +1,9 @@
-import './style.css'
+import { FormComponent } from './style'
 
 export const Form = ({children}) =>{
     return(
-        <form action="">
+        <FormComponent>
             {children}
-        </form>
+        </FormComponent>
     )
 }
