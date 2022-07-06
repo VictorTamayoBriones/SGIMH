@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Buildings } from "../../components/Buildings";
 import { AddCycle } from "../../components/Buttons";
 import { CyclesList } from "../../components/CyclesList";
 import { UsersContext } from "../../context/users"
@@ -13,6 +14,7 @@ export const Dashboard = () => {
         <DashboardComponent>
             {currentUser[0]?.role == 'admin' ? <AddCycle/> : null}
             <CyclesList/>
+            <Buildings/>
         </DashboardComponent>
     )
 }
