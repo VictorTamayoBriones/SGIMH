@@ -1,8 +1,8 @@
 import { FormComponent } from './style'
 
-export const Form = ({children}) =>{
+export const Form = ({children, createSome}) =>{
     return(
-        <FormComponent>
+        <FormComponent createSome={createSome} >
             {children}
         </FormComponent>
     )

@@ -4,3 +4,35 @@
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dates{
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.date{
+  color: #F5751A;
+  text-align: center;
+}
+
+.btns{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.btns button{
+  width: 20%;
+}
