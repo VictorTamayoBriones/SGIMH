@@ -7,6 +7,7 @@ export const BuildingComponent = styled.div`
     width: max-content;
     height: max-content;
     transition: .3s ease-in-out all;
+    border-radius: 2px;
     cursor: pointer;
 
     div > div, div > h2{

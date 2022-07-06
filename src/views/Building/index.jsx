@@ -21,6 +21,7 @@ export const Building = () =>{
                     {building[0]?.carreras?.map((carrera, i)=>(
                         <div key={i} >
                             <h4>{carrera.nameCarrera}</h4>
+                            <h5>Materias</h5>
                             <ul>
                                 {
                                     carrera.materias.map((materia, i)=>(
@@ -36,6 +37,7 @@ export const Building = () =>{
                                     ))
                                 }
                             </ul>
+                            <button>Crear Horario para {carrera.nameCarrera} </button>
                         </div>
                     ))}
             </div>
