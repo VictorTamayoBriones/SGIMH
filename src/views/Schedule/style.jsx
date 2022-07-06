@@ -31,6 +31,7 @@ export const ScheduleView = styled.section`
             padding: 5px;
             border-radius: 5px;
             margin: 20px 0;
+            cursor: grab;
         }
     }
 
