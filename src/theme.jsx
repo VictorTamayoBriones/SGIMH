@@ -8,5 +8,6 @@ export const theme = {
     cafeClaro: '#DBCB9F',
     marino: '#093C4E',
     magenta: '#B41E82',
-    morado: '#73366F'
+    morado: '#73366F',
+    gris: '#616161'
 }
