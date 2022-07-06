@@ -3,6 +3,7 @@ import { Building } from "../views/Building"
 import { Dashboard } from "../views/Dashboard"
 import { Login } from "../views/Login"
 import { NewCycle } from "../views/NewCycle"
+import { Schedule } from "../views/Schedule"
 
 export const AppRoutes = () =>{
     return(
@@ -11,8 +12,8 @@ export const AppRoutes = () =>{
             <Route path="/dashboard" element={ <Dashboard/> } />
             <Route path="/newCycle" element={ <NewCycle/> } />
             <Route path="/building:name" element={ <Building/> } />
+            <Route path="/schedule:carrera" element={<Schedule/>}/>
             <Route path="/newTeacher" />
-            <Route path="/schedule" />
         </Routes>
     )
 }

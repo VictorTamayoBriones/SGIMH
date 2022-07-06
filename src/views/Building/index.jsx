@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useContext, useEffect, useState } from "react";
 import { ContextBuildings } from '../../context/buildings';
 import { BuildingView } from "./style";
 
 export const Building = () =>{
+    const navigate = useNavigate();
     const { name } = useParams();
     const { buildings } = useContext(ContextBuildings);
     
@@ -12,6 +13,8 @@ export const Building = () =>{
     useEffect(()=>{
         setBuilding(buildings.filter(building => building.name === name));
     }, [])
+    
+    const handleClick = (carrera) => navigate(`/schedule${carrera}`);
     
     return(
         <BuildingView>
@@ -37,7 +40,7 @@ export const Building = () =>{
                                     ))
                                 }
                             </ul>
-                            <button>Crear Horario para {carrera.nameCarrera} </button>
+                            <button onClick={()=>handleClick(carrera.nameCarrera)} >Crear Horario para {carrera.nameCarrera} </button>
                         </div>
                     ))}
             </div>
