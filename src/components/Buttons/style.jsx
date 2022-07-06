@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { theme } from '../../theme';
 
 export const ButtonComponent = styled.button`
-    width: 50%;
-    margin: auto;
+    width: ${(props)=>props.small ? '20%' : '50%'};
+    margin: 5px auto;
     background: #F5751A;
     color: #fff;
     border: none;

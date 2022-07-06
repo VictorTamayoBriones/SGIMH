@@ -2,9 +2,9 @@ import { AddCycleButton, ButtonComponent } from './style';
 import plus from '../../icons/plus.png';
 import { useNavigate } from 'react-router-dom';
 
-export const Button = ({children, onClick}) => {
+export const Button = ({children, onClick, small}) => {
     return(
-        <ButtonComponent onClick={ onClick } >
+        <ButtonComponent onClick={ onClick } small={small}>
             {children}
         </ButtonComponent>
     )

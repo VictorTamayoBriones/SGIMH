@@ -1,18 +1,24 @@
+import { useNavigate } from "react-router-dom"
 import { BuildingComponent } from "./style"
 
-export const Building = () =>{
+export const Building = ({name, carreras}) =>{
+    const navigate = useNavigate();
+
+    const handleClick = (name)=> navigate(`/building${name}`)
+
     return(
-        <BuildingComponent>
+        <BuildingComponent onClick={()=>handleClick(name)} >
             <div className="name">
-                <h2>P</h2>
+                <h2>{name}</h2>
             </div>
             <div className="carreras">
-                <div className="carrera">
-                    <p>Tics</p>
-                </div>
-                <div className="carrera">
-                    <p>Diseño</p>
-                </div>
+                {
+                    carreras.map((carrera, i)=>(
+                        <div key={i} className="carrera">
+                            <p>{carrera.nameCarrera}</p>
+                        </div>
+                    ))
+                }
             </div>
         </BuildingComponent>
     )

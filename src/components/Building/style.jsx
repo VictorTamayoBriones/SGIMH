@@ -6,6 +6,9 @@ export const BuildingComponent = styled.div`
     margin: 20px 20px 20px 0;
     width: max-content;
     height: max-content;
+    transition: .3s ease-in-out all;
+    cursor: pointer;
+
     div > div, div > h2{
         background: ${theme.amarillo};
         padding: 5px;
@@ -23,4 +26,7 @@ export const BuildingComponent = styled.div`
         margin-right: 5px;
     }
 
+    &:hover{
+        box-shadow: 0px 0px 9px 2px #54545470;
+    }
 `;
